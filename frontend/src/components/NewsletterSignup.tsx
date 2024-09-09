@@ -2,31 +2,31 @@ import React from 'react';
 
 const NewsletterSignup = () => {
   return (
-    <section className="flex flex-col justify-center px-32 py-16 w-full max-md:px-5 max-md:max-w-full">
+    <section className="flex flex-col lg:flex-row justify-center p-16  gap-16 lg:px-120 lg:py-64 w-full max-md:px-5 max-md:max-w-full">
       <div className="flex flex-wrap gap-8 items-start py-4 w-full max-md:max-w-full">
         <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px] max-md:max-w-full">
-          <h2 className="headingsh3medium text-gray-900 max-md:max-w-full">
+          <h2 className="headingsh3medium text-text-primary max-md:max-w-full">
             Never miss an update
           </h2>
-          <p className="paragraphmediumregular max-md:max-w-full">
+          <p className="paragraphmediumregular max-md:max-w-full text-text-paragraph">
             Signup for promotions, new arrivals, updates and more - straight to your inbox
           </p>
         </div>
-        <form className="flex flex-col min-w-[240px] w-[488px] max-md:max-w-full">
-          <div className="flex flex-col w-full text-base tracking-tight max-w-[488px] max-md:max-w-full">
-            <label htmlFor="email" className="flex gap-0.5 items-center self-start font-semibold tracking-tighter text-gray-900 whitespace-nowrap">
+        <form className="flex flex-col min-w-[240px] w-[488px] max-md:max-w-full gap-32">
+          <div className="flex flex-col w-full gap-8  max-w-[488px] max-md:max-w-full">
+            <label htmlFor="email" className="flex  items-center self-start  text-text-primary paragraphmediumsemibold whitespace-nowrap">
               Email
             </label>
             <input
               type="email"
               id="email"
               placeholder="Enter your email address"
-              className="flex gap-2 items-center p-2 mt-2 w-full text-gray-500 rounded border border-gray-200 border-solid max-md:max-w-full"
+              className="flex items-center -full text-text-tertiary  rounded-xxs  border-stroke-primary_hover  max-md:max-w-full paragraphmediumregular"
               required
             />
-            <div className="flex flex-wrap gap-1 items-start mt-2 w-full leading-6 text-slate-600 max-md:max-w-full">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc3e239e7365e07d60ce75dfe19e9d100026c16e1647b14203db1b1cdd576503?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba" alt="" className="object-contain shrink-0 aspect-square w-[18px]" />
-              <div className="flex-1 shrink basis-0 max-md:max-w-full">
+            <div className="flex flex-wrap gap-4 items-start self-stretch w-full   text-text-paragraph max-md:max-w-full">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc3e239e7365e07d60ce75dfe19e9d100026c16e1647b14203db1b1cdd576503?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba" alt="" className="object-contain shrink-0 aspect-square w-[18px] mt-2" />
+              <div className="flex-1 shrink basis-0 paragraphmediumregular max-md:max-w-full">
               We will be sending you regular updates about offers and new arrivals. If you don't wish to receive them, you can opt out by clicking on Unsubscribe link in the email
             </div>
           </div>
