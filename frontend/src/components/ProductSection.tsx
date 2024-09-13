@@ -1,19 +1,24 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const ProductSection = ({ title, subtitle, products }) => {
   const [width, setWidth] = useState(0);
   const carouselRef = useRef();
 
-  // Update carousel width dynamically after it renders
-  React.useEffect(() => {
-    setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
-  }, []);
+  // Update carousel width dynamically after it renders and when products change
+  useEffect(() => {
+    if (carouselRef.current) {
+      const scrollWidth = carouselRef.current.scrollWidth;
+      const offsetWidth = carouselRef.current.offsetWidth;
+      const extraPadding = 16; // Adjust this based on the gap between items
+      setWidth(scrollWidth - offsetWidth + extraPadding);
+    }
+  }, [products.length]); // Recalculate when the number of products changes
 
   return (
-    <section className="flex flex-col gap-16 p-16 w-full items-start self-stretch max-md:px-5 max-md:max-w-full">
+    <section className="flex flex-col gap-16 p-16 w-full items-start self-stretch lg:px-120 lg:py-64 max-md:px-5 max-md:max-w-full">
       <div className="flex flex-wrap gap-8 items-center w-full text-text-primary max-md:max-w-full">
         <h2 className="flex-1 shrink self-stretch headingsh5medium basis-12 max-md:max-w-full">
           {title}
@@ -45,6 +50,7 @@ const ProductSection = ({ title, subtitle, products }) => {
               drag="x"
               dragConstraints={{ right: 0, left: -width }}
               className="flex gap-16"
+              style={{ paddingRight: '16px' }} // Add padding to the right
             >
               {products.map((product, index) => (
                 <motion.div key={index} className="min-w-[250px]">

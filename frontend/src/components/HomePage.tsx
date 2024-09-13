@@ -46,6 +46,10 @@ const HomePage = () => {
           reverse={true}
         />
         <ProductSection
+          title="New In"
+          products={trendingProducts}
+        />
+        <ProductSection
           title="Trending now"
           products={trendingProducts}
         />
