@@ -8,17 +8,17 @@ import Footer from './Footer';
 
 const HomePage = () => {
   const newProducts = [
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" }
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" }
   ];
 
   const trendingProducts = [
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
-    { image: "https://cdn.builder.io/api/v1/image/assets/TEMP/9dc8f32790e581c1f2e4a6d6242895fe0d7712e32bf80180e26436ae8012897f?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" }
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" },
+    { image: "/images/Product.png", status: "Sale", name: "Product Name", salePrice: "99", originalPrice: "99", comparePrice: "99" }
   ];
 
   return (

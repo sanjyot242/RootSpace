@@ -31,6 +31,12 @@ export default withMT({
       borderColor: {
         ...combinedTokens.borderColor, // Use actual color values
       },
+      boxShadow:{
+        ...combinedTokens.boxShadow,
+      },
+      outline:{
+        ...combinedTokens.outline,
+      },
       fontSize: {
     'desktop-headings-display-large-regular': [
       '3.25rem',

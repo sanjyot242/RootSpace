@@ -50,13 +50,13 @@ const Header = () => {
   return (
     <header className="flex overflow-hidden flex-col bg-white">
       <NotificationsTab />
-      <nav className="flex flex-wrap gap-10 justify-center items-center px-32 py-0 w-full bg-white shadow-lg max-md:px-5 max-md:max-w-full">
-        <div className="flex gap-2 items-center self-stretch py-4 my-auto w-36">
+      <nav >
+        {/* <div className="flex gap-2 items-center self-stretch py-4 my-auto w-36">
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bff7bb7c180b284ffba00bc35e07564e8e2c1265b211860d2dea5e184b18f46?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba" alt="Company logo" className="object-contain self-stretch my-auto w-36 aspect-[4.24]" />
-        </div>
+        </div> */}
         <Navigation />
-        <SearchBar />
-        <UserActions />
+        {/* <SearchBar />
+        <UserActions /> */}
       </nav>
     </header>
   );
