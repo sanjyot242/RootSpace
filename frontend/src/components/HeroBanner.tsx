@@ -2,20 +2,35 @@ import React from 'react';
 
 const HeroBanner = () => {
   return (
-    <section className="flex relative flex-col justify-center items-center px-16 py-80 w-full min-h-[834px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets%2F6075100a88d44b09b2d6c5b584a495ba%2F8fc72dc6391340748d26344fa68bc9dd" alt="Sale background" className="object-cover absolute inset-0 size-full" />
-      <div className="flex relative flex-col max-w-full w-[818px]">
-        <div className="flex flex-col items-start w-full text-center text-white max-md:max-w-full">
-          <h1 className="text-5xl font-medium tracking-tighter leading-[56px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
-            Sale Update: Now upto 60% off on select items
+    <section className="relative flex flex-col self-stretch items-center">
+      {/* Image with Gradient Overlay */}
+      <div className="relative w-full h-full">
+        <img 
+          loading="lazy" 
+          src="/images/Hero.png" 
+          alt="Sale background" 
+          className="object-cover w-full h-full"
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(21,28,36,0.6)] to-[rgba(21,28,36,0.6)]"></div>
+      </div>
+      
+      {/* Text Content */}
+      <div className="absolute inset-x-0 bottom-0 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 flex flex-col items-center text-center text-text-inverse lg:p-none px-16">
+        <div className="flex flex-col gap-8">
+          <h1 className="text-mobile-headings-h1-medium lg:text-desktop-headings-display-large-medium font-ebgaramond ">
+            Sale Update: Now up to 60% off on select items
           </h1>
-          <p className="mt-2 text-xl tracking-tight leading-snug max-md:max-w-full">
+          <p className="paragraphsmallmedium">
             The world's greatest designers - Now on sale! T&C apply
           </p>
         </div>
-        <a href="#shop-now" className="gap-2 self-center px-5 py-2.5 mt-8 text-sm leading-none text-gray-900 bg-white rounded border-gray-300 border-solid shadow-sm border-[0.5px]">
-          Shop now
-        </a>
+        {/* Button with 32px gap */}
+        <div className="mt-32 mb-16 flex justify-center items-center">
+          <button className="py-10 px-20 rounded-xxs border-[0.5px] border-stroke-primary bg-bg-primary shadow-button-shadow text-text-primary paragraphsmallregular">
+            Shop Now
+          </button>
+        </div>
       </div>
     </section>
   );

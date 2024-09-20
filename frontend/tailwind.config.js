@@ -6,6 +6,9 @@ export default withMT({
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(0deg, rgba(21, 28, 36, 0.60) 0%, rgba(21, 28, 36, 0.60) 100%), url("/images/Hero.png")',
+      },
       fontFamily: {
         ebgaramond: ['"EB Garamond"', 'serif'], // Add EB Garamond font
         inter: ['"Inter"', 'sans-serif'], // Add Inter font
