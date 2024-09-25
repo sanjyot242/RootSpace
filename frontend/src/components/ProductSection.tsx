@@ -36,8 +36,8 @@ const ProductSection = ({ title, subtitle, products }) => {
         </a>
       </div>
       <div className="flex flex-col justify-center mt-8 w-full max-md:max-w-full">
-        {/* For larger screens */}
-        <div className="hidden md:flex flex-wrap gap-4 items-center w-full max-md:max-w-full">
+      {/* For larger screens */}
+        <div className="hidden md:flex flex-wrap gap-20 items-center w-full max-md:max-w-full">
           {products.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
