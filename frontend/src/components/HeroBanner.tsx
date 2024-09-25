@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from './Buttons/Button';
 
 const HeroBanner = () => {
   return (
@@ -27,9 +28,7 @@ const HeroBanner = () => {
         </div>
         {/* Button with 32px gap */}
         <div className="mt-32 mb-16 flex justify-center items-center">
-          <button className="py-10 px-20 rounded-xxs border-[0.5px] border-stroke-primary bg-bg-primary shadow-button-shadow text-text-primary paragraphsmallregular">
-            Shop Now
-          </button>
+          <Button size='medium' theme='secondary' stateProp='normal'  >Shop Now</Button>
         </div>
       </div>
     </section>
