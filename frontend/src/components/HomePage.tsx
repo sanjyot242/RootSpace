@@ -22,7 +22,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="flex overflow-hidden flex-col bg-white">
+    <div className="flex flex-col bg-white">
       <Header />
       <main>
         <HeroBanner />

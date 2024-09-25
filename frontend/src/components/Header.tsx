@@ -48,16 +48,15 @@ import Navigation from './Navigation';
 
 const Header = () => {
   return (
-    <header className="flex overflow-hidden  flex-col  bg-white ">
-      <NotificationsTab />
+    <header className="sticky top-0 z-50 flex overflow-hidden flex-col bg-white shadow-lg">
+      {/* <NotificationsTab /> */}
       
-        {/* <div className="flex gap-2 items-center self-stretch py-4 my-auto w-36">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bff7bb7c180b284ffba00bc35e07564e8e2c1265b211860d2dea5e184b18f46?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba" alt="Company logo" className="object-contain self-stretch my-auto w-36 aspect-[4.24]" />
-        </div> */}
-        <Navigation/>
-        {/* <SearchBar />
-        <UserActions /> */}
-      
+      {/* <div className="flex gap-2 items-center self-stretch py-4 my-auto w-36">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bff7bb7c180b284ffba00bc35e07564e8e2c1265b211860d2dea5e184b18f46?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba" alt="Company logo" className="object-contain self-stretch my-auto w-36 aspect-[4.24]" />
+      </div> */}
+      <Navigation />
+      {/* <SearchBar />
+      <UserActions /> */}
     </header>
   );
 };
