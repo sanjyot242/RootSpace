@@ -18,6 +18,7 @@ const ProductCard = ({ image, status, name, salePrice, originalPrice, comparePri
         left: '12px'
     };
   return (
+      <div className="flex flex-col flex-1 shrink self-stretch my-auto basis-0 ">
       <div className="flex flex-col flex-1">
           <div className="flex relative justify-between w-full  aspect-[0.791] min-h-[364px]">
               <img loading="lazy" src={image} alt={name}
@@ -25,9 +26,10 @@ const ProductCard = ({ image, status, name, salePrice, originalPrice, comparePri
               <HeartIcon style={heartStyle}/>
               <SaleIcon style={saleStyle}/>
           </div>
-          <span className="m-2 font-thin text-[#97A1AF]">{status}</span>
+          <span className="m-2 font-thin text-text-light">{status}</span>
           <span className="font-bold">{name}</span>
-          <p> <span className="text-[#F62C2C]">${salePrice}</span> <span className="line-through text=[#414E62]">${originalPrice}</span></p>
+          <p> <span className="text-text-destructive">${salePrice}</span> <span className="line-through text=[#414E62]">${originalPrice}</span></p>
+      </div>
       </div>
   );
 };
