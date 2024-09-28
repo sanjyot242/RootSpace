@@ -5,6 +5,7 @@ import Logo from './LogoNav';
 import SearchOverLay from './SearchOverLay';
 import { slideInFromLeft } from '../animations/animations';
 import Dropdown from './DropdownButton/DropDown';
+import { Button } from './Buttons/Button';
 
 const Navigation = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -47,7 +48,7 @@ const Navigation = () => {
         initial={slideInFromLeft.initial}
         animate={isOpen ? slideInFromLeft.animate : slideInFromLeft.exit}
         transition={slideInFromLeft.transition}
-        className='fixed top-0 left-0 h-full w-3/4 p-16 items-start gap-32 bg-bg-primary border-[0.5px] border-stroke-primary_hover rounded-xxs'>
+        className='fixed top-[50px] overflow-y-auto left-0 h-2/4 w-full p-16 items-start gap-32 bg-bg-primary border-[0.5px] border-stroke-primary_hover rounded-xxs'>
         <div className='flex flex-col gap-16 self-stretch shrink-0 items-start'>
           {/* Close button inside the menu */}
           <button onClick={toggleMenu} className='self-start text-white'>
@@ -77,7 +78,34 @@ const Navigation = () => {
             <Dropdown label={'Unisex'} />
           </div>
 
-          {/* Navigation Links */}
+          <div className='flex flex-col items-start gap-32 self-stretch'>
+            <div className='flex flex-col items-start gap-16  self-stretch'>
+              <div className='text-text-primary text-mobile-headings-h5-medium font-ebgaramond'>
+                My Account
+              </div>
+              <Button
+                socialMediaIcon={false}
+                rightIcon={false}
+                leftIcon={false}
+                size='medium'
+                theme='primary'
+                stateProp='normal'
+                className='w-full'>
+                Sign In
+              </Button>
+              <Button
+                socialMediaIcon={false}
+                rightIcon={false}
+                leftIcon={false}
+                size='medium'
+                theme='secondary'
+                stateProp='normal'
+                className='w-full'>
+                Register
+              </Button>
+            </div>
+            <div className='flex flex-col items-start gap-14  self-stretch'></div>
+          </div>
         </div>
       </motion.div>
 
