@@ -11,7 +11,7 @@ const Dropdown = ({ label }) => {
     <div className=' inline-flex flex-col p-12 items-start gap-8   bg-bg-primary '>
       <button
         onClick={toggleDropdown}
-        className='flex items-center gap-8 text-paragraph-small-regular text-text-primary w-full justify-between'>
+        className='flex items-center gap-8 paragraphsmallregular text-text-primary w-full justify-between'>
         {label}
         <span className='flex-shrink-0 items-end'>
           <svg

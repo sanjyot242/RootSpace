@@ -68,7 +68,7 @@ const Navigation = () => {
             </svg>
           </button>
 
-          <div className='w-full self-stretch text-text-primary text-paragraph-small-medium font-ebgaramond'>
+          <div className='w-full self-stretch text-text-primary  paragraphsmallmedium'>
             Select one
           </div>
 
