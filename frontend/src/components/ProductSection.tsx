@@ -1,21 +1,17 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 import { motion } from 'framer-motion';
-import { useRef, useState, useEffect } from 'react';
 
 const ProductSection = ({ title, subtitle, products }) => {
   const [width, setWidth] = useState(0);
-  const carouselRef = useRef();
+  const carouselRef = useRef(null);
 
-  // Update carousel width dynamically after it renders and when products change
+  // Set the total scrollable width for the carousel based on the number of products
   useEffect(() => {
     if (carouselRef.current) {
-      const scrollWidth = carouselRef.current.scrollWidth;
-      const offsetWidth = carouselRef.current.offsetWidth;
-      const extraPadding = 16; // Adjust this based on the gap between items
-      setWidth(scrollWidth - offsetWidth + extraPadding);
+      setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
     }
-  }, [products.length]); // Recalculate when the number of products changes
+  }, [products.length]);
 
   return (
     <section className="flex flex-col gap-16 p-16 w-full items-start self-stretch lg:px-120 lg:py-64 max-md:px-5 max-md:max-w-full">
@@ -35,22 +31,45 @@ const ProductSection = ({ title, subtitle, products }) => {
           Shop now
         </a>
       </div>
+
       <div className="flex flex-col justify-center mt-8 w-full max-md:max-w-full">
-      {/* For larger screens */}
-        <div className="hidden md:flex flex-wrap gap-20 items-center w-full max-md:max-w-full">
-          {products.map((product, index) => (
-            <ProductCard key={index} {...product} />
-          ))}
+        {/* For larger screens (md and above) */}
+        <div className="hidden md:flex gap-16 w-full justify-between">
+          {products.length <= 4 ? (
+            products.map((product, index) => (
+              <div
+                key={index}
+                className="flex-grow flex-shrink-0 min-w-[250px] lg:min-w-[22%]" // Ensure minimum width for cards and allow them to grow
+              >
+                <ProductCard {...product} />
+              </div>
+            ))
+          ) : (
+            <motion.div ref={carouselRef} className="cursor-grab overflow-hidden w-full">
+              <motion.div
+                drag="x"
+                dragConstraints={{ right: 0, left: -width }}
+                className="flex gap-16"
+                style={{ paddingRight: '16px' }}
+              >
+                {products.map((product, index) => (
+                  <motion.div key={index} className="min-w-[250px]">
+                    <ProductCard {...product} />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
         </div>
 
-        {/* For smaller screens - Framer Motion Carousel */}
+        {/* For smaller screens - always use the carousel */}
         <div className="md:hidden">
           <motion.div ref={carouselRef} className="cursor-grab overflow-hidden">
             <motion.div
               drag="x"
               dragConstraints={{ right: 0, left: -width }}
-              className="flex gap-16"
-              style={{ paddingRight: '16px' }} // Add padding to the right
+              className="flex gap-8"
+              style={{ paddingRight: '16px' }}
             >
               {products.map((product, index) => (
                 <motion.div key={index} className="min-w-[250px]">
