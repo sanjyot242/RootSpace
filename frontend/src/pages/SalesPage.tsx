@@ -9,8 +9,8 @@ export default function SalesPage() {
         <p>Filters</p>
         <p>occassion filter</p>
       </div>
-      <div className="grid grid-col-3 grid-flow-col gap-8 mt-12">
-        <div className="">
+      <div className="grid grid-col-4 grid-flow-col gap-8 mt-12">
+        <div className="col-span-1">
           <div className="">
             <div className="flex justify-between border-b-2">
               <p>Categories</p>
@@ -29,11 +29,12 @@ export default function SalesPage() {
             <Checkbox label="Filter" />
           </div>
         </div>
-
-        <div className="col-span-2">
-          <div className="flex flex-wrap gap-20 ">
+        <div className="col-span-3">
+          <div className="flex flex-auto flex-wrap gap-20 ">
             {newProducts.map((product, index) => (
-              <ProductCard key={index} {...product} />
+              <div className="max-w-[30%]">
+                <ProductCard key={index} {...product} />
+              </div>
             ))}
           </div>
         </div>
