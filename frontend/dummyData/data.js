@@ -69,8 +69,6 @@ export const trendingProducts = [
   },
 ];
 
-
-
 export const ShoppingProducts = [
   {
     image: "/images/Product.png",

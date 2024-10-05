@@ -3,14 +3,17 @@ import { motion } from "framer-motion";
 import IconButton from "./IconButton";
 import Logo from "./LogoNav";
 import SearchOverLay from "./SearchOverLay";
-import { slideInFromLeft } from "../animations/animations";
-import Dropdown from "./DropdownButton/DropDown";
+import { slideInFromLeft,slideInFromRight } from "../animations/animations";
+
 import { Button } from "./Buttons/Button";
 import { Link } from "react-router-dom";
+import Selection from "./Selection/Selection";
 
 const Navigation = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [submenuOpen, setSubmenuOpen] = useState(false); // New state for submenu
+  const [selectedMenu, setSelectedMenu] = useState(""); 
 
   // Toggle search overlay on small screens
   const toggleSearch = () => {
@@ -21,6 +24,16 @@ const Navigation = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+
+  const openSubmenu = (label: string) => {
+    setSelectedMenu(label);
+    setSubmenuOpen(true); // Open the submenu
+  };
+
+  const closeSubmenu = () => {
+    setSubmenuOpen(false);
   };
 
   const icons = [
@@ -49,7 +62,7 @@ const Navigation = () => {
         initial={slideInFromLeft.initial}
         animate={isOpen ? slideInFromLeft.animate : slideInFromLeft.exit}
         transition={slideInFromLeft.transition}
-        className="fixed top-[50px] overflow-y-auto left-0 h-2/4 w-full p-16 items-start gap-32 bg-bg-primary border-[0.5px] border-stroke-primary_hover rounded-xxs"
+        className="fixed top-[50px] left-0 h-full w-full p-16 items-start gap-32 bg-bg-primary border-[0.5px] border-stroke-primary_hover rounded-xxs"
       >
         <div className="flex flex-col gap-16 self-stretch shrink-0 items-start">
           {/* Close button inside the menu */}
@@ -76,11 +89,50 @@ const Navigation = () => {
           </div>
 
           <div className="w-full flex flex-col self-start gap-8 shrink-0 ">
-            <Dropdown label={"Women"} />
-            <Dropdown label={"Men"} />
-            <Dropdown label={"Unisex"} />
+          <Selection
+        label="Brands"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        onClick={() => openSubmenu("Brands")} 
+      />
+            <Selection
+        label="Womenswear"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        onClick={() => openSubmenu("Womenswear")} 
+      />
+            <Selection
+        label="Menswear"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        onClick={() => openSubmenu("Menswear")} 
+      />
+            <Selection
+        label="Unisex"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        onClick={() => openSubmenu("Unisex")}
+      />
+       <Selection
+        label="Kidswear"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        onClick={() => openSubmenu("Kidswear")} 
+      />
           </div>
 
+
+          {/* Div for My account Buttons */}
           <div className="flex flex-col items-start gap-32 self-stretch">
             <div className="flex flex-col items-start gap-16  self-stretch">
               <div className="text-text-primary text-mobile-headings-h5-medium font-ebgaramond">
@@ -109,10 +161,122 @@ const Navigation = () => {
                 Register
               </Button>
             </div>
-            <div className="flex flex-col items-start gap-14  self-stretch"></div>
           </div>
         </div>
       </motion.div>
+
+    {/* Submenu sliding in from the right */}
+    <motion.div
+        initial={slideInFromRight.initial}
+        animate={submenuOpen ? slideInFromRight.animate : slideInFromRight.exit}
+        transition={slideInFromRight.transition}
+        className="fixed top-[50px] right-0 h-full w-full p-16 items-start gap-32 bg-bg-primary border-[0.5px] border-stroke-primary_hover rounded-xxs"
+      >
+         <div className="flex flex-col gap-16 self-stretch shrink-0 items-start">
+          {/* Close button inside the menu */}
+          <button onClick={closeSubmenu} className="self-start text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+            >
+              <path
+                d="M11.8222 21.6224L4.2 14.0002M4.2 14.0002L11.8222 6.37793M4.2 14.0002L23.8 14.0002"
+                stroke="#171717"
+                stroke-width="1.67"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div className="w-full self-stretch text-text-primary  paragraphsmallmedium">
+            Whats New in {selectedMenu} ?
+          </div>
+
+          <div className="w-full flex flex-col self-start gap-8 shrink-0 ">
+          <Selection
+        label="Topwear"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        
+      />
+            <Selection
+        label="Bottomwear"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        
+      />
+            <Selection
+        label="Accessories"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+       
+      />
+            <Selection
+        label="Loungewear"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        
+      />
+       <Selection
+        label="Hats"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        
+      />
+      <Selection
+        label="Bags"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+        
+      />
+      <Selection
+        label="Sale"
+        showBadge={false}
+        showSwitch={false}
+        showRadioButton={false}
+        showIcon={true}
+       
+      />
+          </div>
+
+
+          
+        </div>
+      </motion.div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* div for Categories - hidden on smaller screens, shown on lg */}
       <div className="hidden lg:flex   gap-32 flex-wrap">

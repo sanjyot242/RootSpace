@@ -7,6 +7,7 @@ import MenuList from "../components/MenuList/MenuList";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { slideInFromLeft } from "../animations/animations";
+import NewsletterSignup from "../components/NewsletterSignup";
 
 export default function SalesPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -196,6 +197,8 @@ export default function SalesPage() {
           ))}
         </div>
       </div>
+
+      
     </div>
   );
 }
