@@ -1,20 +1,22 @@
-import "./App.css";
-import Header from "./components/Header";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
-import Products from "./components/Products";
-import Home from "./pages/Home";
-import ErrorPage from "./pages/ErrorPage";
-import SalesPage from "./pages/SalesPage";
+import './App.css';
+import Header from './components/Header';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
+import Products from './components/Products';
+import Home from './pages/Home';
+import ErrorPage from './pages/ErrorPage';
+import SalesPage from './pages/SalesPage';
+import ProductPage from './pages/ProductPage';
 
 function App() {
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/sale" element={<SalesPage />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/sale' element={<SalesPage />} />
+        <Route path='/productPage' element={<ProductPage />} />
         {/* <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Registration />} />
       <Route path='/cart' element={<ShoppingCart />} />
@@ -26,7 +28,7 @@ function App() {
       />
       <Route path='/NotFound' element={<ErrorPage />} /> */}
 
-        <Route path="*" element={<ErrorPage />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Router>
