@@ -57,11 +57,11 @@ const ProductSection = ({ isMobile }) => {
       ) : (
         <div className='flex flex-col items-start self-stretch gap-16'>
           {/* Desktop Image View */}
-          <div className='felx justify-center w-full '>
+          <div className='flex flex-1 justify-center w-full '>
             <img
               src={selectedImage}
               alt='Product'
-              className='max-w-full h-auto  bg-contain bg-no-repeat bg-center rounded-xxs'
+              className='max-w-full h-[676px]  bg-no-repeat bg-contain object-cover rounded-xxs'
             />
           </div>
           {/* Add more images or thumbnails if needed */}
@@ -86,7 +86,7 @@ const ProductSection = ({ isMobile }) => {
               <div
                 key={index}
                 onClick={() => setSelectedImage(image)}
-                className={`w-48 h-48 bg-cover  bg-no-repeat rounded-xxs cursor-pointer ${
+                className={`w-96 h-96 bg-cover  bg-no-repeat rounded-xxs cursor-pointer ${
                   selectedImage === image ? 'border-2 border-black' : ''
                 }`}
                 style={{ backgroundImage: `url(${image})` }}>

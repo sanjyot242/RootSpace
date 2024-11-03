@@ -25,6 +25,10 @@ const ShoppingActions = ({
           Product Description
         </p>
 
+        {showRatings && (
+          <p className='text-sm text-yellow-500'>⭐ Ratings: 4.5/5</p>
+        )}
+
         <div className='flex items-center gap-16'>
           {normalPrice && (
             <p
@@ -165,20 +169,6 @@ const ShoppingActions = ({
           description='This is an information alert.'
           onClose={() => console.log('Alert closed')}
         />
-      )}
-
-      <div>
-        <p className='text-sm font-semibold'>Delivery Options</p>
-        <ul className='text-sm text-gray-500 space-y-1 mt-1'>
-          <li>Enter Pincode</li>
-          <li>Delivery by 19 September</li>
-          <li>Cash on delivery available</li>
-          <li>14 Day Refund available</li>
-        </ul>
-      </div>
-
-      {showRatings && (
-        <p className='text-sm text-yellow-500'>⭐ Ratings: 4.5/5</p>
       )}
     </div>
   );
