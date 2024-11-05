@@ -1,4 +1,5 @@
 
+
 import { ShoppingProducts } from '../../dummyData/data';
 import ProductCard from '../components/ProductCard';
 import { Button } from '../components/Buttons/Button';
@@ -13,8 +14,8 @@ import Selection from '../components/Selection/Selection';
 
 export default function SalesPage() {
   const [isOpen, setIsOpen] = useState(false);
-  const [submenuOpen, setSubmenuOpen] = useState(false); // New state for submenu
-  const [selectedMenu, setSelectedMenu] = useState('');
+  const [, setSubmenuOpen] = useState(false); // New state for submenu
+  const [, setSelectedMenu] = useState('');
 
   // Toggle search overlay on small screens
   const toggleMenu = () => {

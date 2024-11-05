@@ -63,7 +63,7 @@ const Navigation = () => {
     'Sale',
   ];
 
-  const categories = ['Women', 'Men', 'Unisex', 'Brands', 'New', 'Sale'];
+  // const categories = ['Women', 'Men', 'Unisex', 'Brands', 'New', 'Sale'];
 
   return (
     <nav className='flex justify-between items-center px-16 lg:px-120 py-4 lg:py-0 gap-32 lg:gap-64 bg-white w-full '>
