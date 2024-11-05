@@ -1,4 +1,4 @@
-import withMT from '@material-tailwind/react/utils/withMt';
+import withMT from '@material-tailwind/react/utils/withMT';
 import combinedTokens from './combinedTokens.json' assert { type: 'json' };
 
 
