@@ -1,4 +1,4 @@
-import React from "react";
+
 import HeartIcon from "../../public/images/heart-icon.svg?react";
 import SaleIcon from "../../public/images/sale.svg?react";
 import { div } from "framer-motion/client";
