@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import CircleIndicator from '../../CircleIndicator.jsx'; // Import the reusable SVG component
 
 const ProductSection = ({ isMobile }) => {

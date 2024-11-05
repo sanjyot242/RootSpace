@@ -21,6 +21,7 @@ function Home() {
         buttonText='Shop now'
         imageSrc='https://cdn.builder.io/api/v1/image/assets/TEMP/27ea2a498441aad79bc1f49dd6372beb3fa2823073c9c23871be7b211087df66?placeholderIfAbsent=true&apiKey=6075100a88d44b09b2d6c5b584a495ba'
         imageAlt='Streetwear collection'
+        
       />
       <FeatureSection
         title='Sale Update: Now upto 60% off on select items'

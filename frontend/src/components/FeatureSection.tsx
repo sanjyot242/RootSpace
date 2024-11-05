@@ -8,7 +8,7 @@ interface FeatureSectionProps {
   buttonText: string;
   imageSrc: string;
   imageAlt: string;
-  reverse:boolean;
+  reverse?:boolean;
 }
 
 const FeatureSection: React.FC<FeatureSectionProps> =  ({ title, description, buttonText, imageSrc, imageAlt, reverse = false }) => {

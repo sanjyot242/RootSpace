@@ -130,9 +130,6 @@ const ShoppingActions = ({
           size='large'
           stateProp={buttonSetActive ? 'normal' : 'disabled'}
           theme='primary'
-          leftIcon={false}
-          rightIcon={true}
-          socialMediaIcon={false}
           className='w-1/2'>
           Add to Bag
         </Button>
@@ -140,9 +137,7 @@ const ShoppingActions = ({
           size='large'
           stateProp={buttonSetActive ? 'normal' : 'disabled'}
           theme='secondary'
-          leftIcon={false}
-          rightIcon={false}
-          socialMediaIcon={false}
+          
           className='w-1/2'>
           Add to Wishlist
         </Button>

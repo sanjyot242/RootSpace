@@ -1,5 +1,5 @@
 
-import { ShoppingProducts, trendingProducts } from '../../dummyData/data';
+import { ShoppingProducts } from '../../dummyData/data';
 import ProductCard from '../components/ProductCard';
 import { Button } from '../components/Buttons/Button';
 import Chip from '../components/Chips/Chips';
@@ -39,22 +39,20 @@ export default function SalesPage() {
         <div className='flex items-start justify-evenly gap-16 self-stretch '>
           <Button
             size='medium'
-            leftIcon={false}
-            rightIcon={false}
+            
             stateProp='normal'
             theme='secondary'
-            socialMediaIcon={false}
+            
             className='w-1/2'
             onClick={toggleMenu}>
             Filters
           </Button>
           <Button
             size='medium'
-            leftIcon={false}
-            rightIcon={false}
+            
             stateProp='normal'
             theme='secondary'
-            socialMediaIcon={false}
+            
             className='w-1/2'>
             Sort By
           </Button>
@@ -90,9 +88,7 @@ export default function SalesPage() {
                 size='medium'
                 theme='destructive-secondary'
                 stateProp='normal'
-                leftIcon={false}
-                rightIcon={false}
-                socialMediaIcon={false}
+                
                 className='w-1/2'>
                 Cancel
               </Button>
@@ -100,9 +96,7 @@ export default function SalesPage() {
                 size='medium'
                 theme='primary'
                 stateProp='normal'
-                leftIcon={false}
-                rightIcon={false}
-                socialMediaIcon={false}
+                
                 className='w-1/2'>
                 Apply
               </Button>

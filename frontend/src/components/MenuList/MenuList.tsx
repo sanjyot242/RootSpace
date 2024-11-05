@@ -41,9 +41,7 @@ const MenuList: React.FC<MenuListProps> = ({
         {/* {showRightIcon && <div className="bg-gray-300 w-4 h-4 rounded-full" />} */}
         {showAction2 && (
           <Button
-            socialMediaIcon={false}
-            leftIcon={false}
-            rightIcon={false}
+            
             stateProp="normal"
             theme="destructive-link"
             size="large"

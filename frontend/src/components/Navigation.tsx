@@ -105,9 +105,7 @@ const Navigation = () => {
                 My Account
               </div>
               <Button
-                socialMediaIcon={false}
-                rightIcon={false}
-                leftIcon={false}
+                
                 size='medium'
                 theme='primary'
                 stateProp='normal'
@@ -115,9 +113,7 @@ const Navigation = () => {
                 Sign In
               </Button>
               <Button
-                socialMediaIcon={false}
-                rightIcon={false}
-                leftIcon={false}
+                
                 size='medium'
                 theme='secondary'
                 stateProp='normal'
