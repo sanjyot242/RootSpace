@@ -1,5 +1,5 @@
 // Generated from SVG to Code Figma Plugin
-import React from 'react';
+
 
 export const InfoIcon = (props) => (
   <svg

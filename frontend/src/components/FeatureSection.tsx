@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import { Button } from './Buttons/Button';
 
 const FeatureSection = ({ title, description, buttonText, imageSrc, imageAlt, reverse = false }) => {

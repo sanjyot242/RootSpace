@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const CircleIndicator = ({ fill = '#E4E7EC', width = '11', height = '12' }) => (
   <svg

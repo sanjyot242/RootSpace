@@ -1,5 +1,5 @@
 // CloseButton.tsx
-import React from 'react';
+
 
 type CloseButtonProps = {
   onClick: () => void;

@@ -20,9 +20,9 @@ interface Props {
 }
 
 export const Button = ({
-  socialMediaIcon = false,
-  rightIcon = false,
-  leftIcon = false,
+  // socialMediaIcon = false,
+  // rightIcon = false,
+  // leftIcon = false,
   size,
   theme,
   stateProp,

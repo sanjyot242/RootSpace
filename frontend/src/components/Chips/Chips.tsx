@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 
 // Define types for the chip's properties

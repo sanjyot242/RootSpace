@@ -1,4 +1,4 @@
-// import React from 'react';
+// 
 
 // function Footer() {
 //   return (
@@ -121,7 +121,7 @@
 
 // export default Footer;
 
-// import React from 'react';
+// 
 
 // const Footer = () => {
 //   const socialIcons = [
@@ -199,7 +199,7 @@
 
 // export default Footer;
 
-import React from 'react';
+
 import Logo from './Logo';
 import SocialLinks from './SocialLinks';
 import AccordionItem from './AccordionItem';

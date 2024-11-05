@@ -1,4 +1,4 @@
-// import React from 'react';
+// 
 // import cartImg from '../assets/cart.jpg';
 // import { Link } from 'react-router-dom';
 // import { useSelector } from 'react-redux';
@@ -40,7 +40,7 @@
 // export default Header;
 
 
-import React from 'react';
+
 import NotificationsTab from './NotificationsTab';
 import Navigation from './Navigation';
 

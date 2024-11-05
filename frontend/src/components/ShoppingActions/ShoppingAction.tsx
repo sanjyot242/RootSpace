@@ -1,4 +1,4 @@
-import React from 'react';
+
 import PropTypes from 'prop-types';
 import { Button } from '../Buttons/Button';
 import Alert from '../Alert/Alert';
