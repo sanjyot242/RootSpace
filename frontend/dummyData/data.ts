@@ -1,4 +1,14 @@
-export const newProducts = [
+interface Product {
+  image: string;
+  status: string;
+  name: string;
+  salePrice: string;
+  originalPrice: string;
+  comparePrice: string;
+}
+
+
+export const newProducts:Product[] =  [
   {
     image: "/images/Product.png",
     status: "Sale",
@@ -34,7 +44,7 @@ export const newProducts = [
   
 ];
 
-export const trendingProducts = [
+export const trendingProducts :Product[] =  [
   {
     image: "/images/Product.png",
     status: "Sale",
@@ -69,7 +79,7 @@ export const trendingProducts = [
   },
 ];
 
-export const ShoppingProducts = [
+export const ShoppingProducts :Product[] =  [
   {
     image: "/images/Product.png",
     status: "Sale",

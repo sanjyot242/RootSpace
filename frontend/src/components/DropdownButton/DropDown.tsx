@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
-const Dropdown = ({ label }) => {
+interface DropdownProps {
+  label: string;
+}
+
+
+
+const Dropdown: React.FC<DropdownProps> = ({ label }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {

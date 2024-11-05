@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Badge from '../Badges/Badges';
 
 
@@ -65,7 +65,7 @@ const Selection: React.FC<SelectionProps> = ({
 
         {showIcon && (
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 5L12 10L7 15" stroke="#151C24" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M7 5L12 10L7 15" stroke="#151C24" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           
         )}

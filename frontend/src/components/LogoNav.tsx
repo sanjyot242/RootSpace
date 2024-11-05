@@ -1,6 +1,8 @@
+interface LogoProps{
+  toggleMenu:()=>void;
+}
 
-
-const Logo = ({ toggleMenu }) => {
+const Logo:React.FC<LogoProps>=({ toggleMenu }) => {
   return (
     <div className='flex flex-wrap gap-8 items-center w-auto'>
       <button onClick={toggleMenu}>

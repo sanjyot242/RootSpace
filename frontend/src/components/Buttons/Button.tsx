@@ -1,5 +1,5 @@
 
-import { useReducer } from "react";
+import  {useReducer}  from "react";
 
 interface Props {
   socialMediaIcon?: null;

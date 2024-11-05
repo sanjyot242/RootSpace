@@ -1,11 +1,27 @@
-import React, { useRef, useState, useEffect } from 'react';
+import  { useRef, useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 import { motion } from 'framer-motion';
 
-const CustomizableSection = ({ title, subtitle, products }) => {
+
+interface Product {
+  image: string;
+  status: string;
+  name: string;
+  salePrice: string;
+  originalPrice: string;
+  comparePrice: string;
+}
+
+interface CustomizableSectionProp {
+  title: string;
+  subtitle: string;
+  products: Product[];
+}
+
+const CustomizableSection: React.FC<CustomizableSectionProp> = ({ title, subtitle, products }) =>{
   console.log(products);
   const [width, setWidth] = useState(0);
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   // Set the total scrollable width for the carousel based on the number of products
   useEffect(() => {

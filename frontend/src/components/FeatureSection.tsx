@@ -2,7 +2,16 @@
 
 import { Button } from './Buttons/Button';
 
-const FeatureSection = ({ title, description, buttonText, imageSrc, imageAlt, reverse = false }) => {
+interface FeatureSectionProps {
+  title: string;
+  description: string;
+  buttonText: string;
+  imageSrc: string;
+  imageAlt: string;
+  reverse:boolean;
+}
+
+const FeatureSection: React.FC<FeatureSectionProps> =  ({ title, description, buttonText, imageSrc, imageAlt, reverse = false }) => {
   return (
     <section
       className={`flex flex-col justify-center items-center gap-16 p-16 lg:gap-64 lg:px-120 lg:py-64 lg:flex-row ${
