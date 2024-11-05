@@ -41,7 +41,7 @@
 
 
 
-import NotificationsTab from './NotificationsTab';
+
 import Navigation from './Navigation';
 
 
