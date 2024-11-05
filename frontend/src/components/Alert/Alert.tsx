@@ -50,9 +50,9 @@ const Alert: React.FC<AlertProps> = ({
           <path
             d='M12.9333 15.7333H12V12H11.0666M12 8.26667H12.0093M20.4 12C20.4 16.6392 16.6392 20.4 12 20.4C7.36078 20.4 3.59998 16.6392 3.59998 12C3.59998 7.36081 7.36078 3.60001 12 3.60001C16.6392 3.60001 20.4 7.36081 20.4 12Z'
             stroke='#0B4A6F'
-            stroke-width='1.67'
-            stroke-linecap='round'
-            stroke-linejoin='round'
+            strokeWidth='1.67'
+            strokeLinecap='round'
+            strokeLinejoin='round'
           />
         </svg>
       </div>
@@ -71,9 +71,9 @@ const Alert: React.FC<AlertProps> = ({
             <path
               d='M6 18L18 6M6 6L18 18'
               stroke='#151C24'
-              stroke-width='1.67'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='1.67'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
           </svg>
         </button>

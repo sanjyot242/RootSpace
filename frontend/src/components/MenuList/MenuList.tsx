@@ -1,6 +1,6 @@
 
 import { Button } from "../Buttons/Button";
-import { label } from "framer-motion/client";
+
 
 // Define the properties based on the JSON
 type MenuListProps = {
@@ -10,16 +10,16 @@ type MenuListProps = {
   showAction1: boolean;
   showAction2: boolean;
   showRightIcon: boolean;
-  label: String;
+  label: string;
 };
 
 const MenuList: React.FC<MenuListProps> = ({
   device = "Web",
   showCheckbox = true,
   showRadio = true,
-  showAction1 = true,
+  //showAction1 = true,
   showAction2 = true,
-  showRightIcon = true,
+  //showRightIcon = true,
   label = "Label",
 }) => {
   // Define specific styles based on the device type

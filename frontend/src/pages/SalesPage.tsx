@@ -1,4 +1,4 @@
-import { Checkbox } from '@material-tailwind/react';
+
 import { ShoppingProducts, trendingProducts } from '../../dummyData/data';
 import ProductCard from '../components/ProductCard';
 import { Button } from '../components/Buttons/Button';
@@ -26,9 +26,9 @@ export default function SalesPage() {
     setSubmenuOpen(true); // Open the submenu
   };
 
-  const closeSubmenu = () => {
-    setSubmenuOpen(false);
-  };
+  // const closeSubmenu = () => {
+  //   setSubmenuOpen(false);
+  // };
 
   const filterList = ['Color', 'Size', 'Price', 'Occassion', 'Fit', 'Category'];
 

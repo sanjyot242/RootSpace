@@ -2,8 +2,8 @@ import CloseButton from '../components/Buttons/CloseButton';
 
 import ProductSection from '../components/ProductSection/ProductSection';
 
-import { newProducts, trendingProducts } from '../../dummyData/data';
-import useWindowDimensions from './../../useWindowDimensions';
+import {  trendingProducts } from '../../dummyData/data' ;
+import useWindowDimensions from './../../useWindowDimensions' ;
 import ShoppingActions from '../components/ShoppingActions/ShoppingAction';
 import InformationAccordianSet from '../components/InformationAccordianSet/InformationAccordian';
 import CustomizableSection from '../components/CustomizableSection';

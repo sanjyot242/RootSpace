@@ -1,7 +1,5 @@
 
-import HeartIcon from "../../public/images/heart-icon.svg?react";
-import SaleIcon from "../../public/images/sale.svg?react";
-import { div } from "framer-motion/client";
+
 
 const ProductCard = ({
   image,
@@ -9,15 +7,15 @@ const ProductCard = ({
   name,
   salePrice,
   originalPrice,
-  comparePrice,
+  // comparePrice,
 }) => {
-  const heartStyle = {
-    zIndex: 1,
-    cursor: "pointer",
-    position: "absolute",
-    bottom: "15px",
-    right: "12px",
-  };
+  // const heartStyle = {
+  //   zIndex: 1,
+  //   cursor: "pointer",
+  //   position: "absolute",
+  //   bottom: "15px",
+  //   right: "12px",
+  // };
   
   return (
     <div className="flex flex-col items-start gap-8 ">

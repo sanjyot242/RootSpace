@@ -23,9 +23,9 @@ const Dropdown = ({ label }) => {
             <path
               d='M15 8L10 13L5 8'
               stroke='#151C24'
-              stroke-width='1.67'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='1.67'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
           </svg>
         </span>
