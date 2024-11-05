@@ -7,7 +7,6 @@ const ShoppingActions = ({
   size = 'Web',
   showRatings = false,
   showAlert = true,
-
   normalPrice = true,
   buttonSetActive = true,
   salePrice = true,
@@ -65,63 +64,63 @@ const ShoppingActions = ({
           <div className='flex gap-32 items-center self-stretch justify-between'>
             <div className='flex gap-8 '>
               <Button
-                size='x-small'
+                size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
                 socialMediaIcon={false}
                 leftIcon={false}
                 rightIcon={false}
-                className='w-[37px]'>
+                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 XS
               </Button>
               <Button
-                size='x-small'
+                size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
                 socialMediaIcon={false}
                 leftIcon={false}
                 rightIcon={false}
-                className='w-[37px]'>
+                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 S
               </Button>
               <Button
-                size='x-small'
+                size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
                 socialMediaIcon={false}
                 leftIcon={false}
                 rightIcon={false}
-                className='w-[37px]'>
+                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 M
               </Button>
               <Button
-                size='x-small'
+                size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
                 socialMediaIcon={false}
                 leftIcon={false}
                 rightIcon={false}
-                className='w-[37px]'>
+                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 L
               </Button>
               <Button
-                size='x-small'
+               size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
                 socialMediaIcon={false}
                 leftIcon={false}
                 rightIcon={false}
-                className='w-[37px]'>
+                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 XL
               </Button>
               <Button
-                size='x-small'
+                size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='disabled'
                 socialMediaIcon={false}
                 leftIcon={false}
                 rightIcon={false}
-                className='w-[37px]'>
+                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 XL
               </Button>
             </div>

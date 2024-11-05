@@ -8,6 +8,9 @@ import ShoppingActions from '../components/ShoppingActions/ShoppingAction';
 import InformationAccordianSet from '../components/InformationAccordianSet/InformationAccordian';
 import CustomizableSection from '../components/CustomizableSection';
 import NewsletterSignup from '../components/NewsletterSignup';
+import  { Breadcrumb,BreadcrumbItemProps } from '../components/BreadCrumbs/BreadCrumb'; // Adjust the path if needed
+
+
 
 function ProductPage() {
   const { width } = useWindowDimensions();
@@ -16,8 +19,16 @@ function ProductPage() {
     console.log('Go back');
   };
 
+
+  const breadcrumbItems: BreadcrumbItemProps[] = [
+    { label: 'Home', state: 'Previous' },
+    { label: 'Projects', state: 'Previous' },
+    { label: 'Dashboard', state: 'Active' },
+  ];
+
   return (
     <>
+      <Breadcrumb items={breadcrumbItems} variant="Web" />
       <div className='flex flex-col items-start gap-32 bg-bg-primary px-16 lg:px-120 lg:py-64 lg:gap-64'>
         {isMobile && (
           <div className='mt-32'>
@@ -33,7 +44,7 @@ function ProductPage() {
           </>
         ) : (
           <>
-            <div className='flex justify-between gap-32'>
+            <div className='flex w-full justify-between gap-32'>
               {/* Desktop View */}
               <div className='flex-1'>
                 <ProductSection isMobile={false} />

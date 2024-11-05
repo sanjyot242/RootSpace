@@ -301,7 +301,7 @@ export const Button = ({
 
         {state.theme === "secondary" &&
           state.size === "small" &&
-          state.state === "normal" && <>Cancel</>}
+          state.state === "normal" && <>{children}</>}
       </div>
     </div>
   );
