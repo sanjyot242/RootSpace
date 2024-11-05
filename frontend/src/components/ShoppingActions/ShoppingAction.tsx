@@ -67,9 +67,7 @@ const ShoppingActions = ({
                 size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
-                socialMediaIcon={false}
-                leftIcon={false}
-                rightIcon={false}
+                
                 className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 XS
               </Button>
@@ -77,9 +75,7 @@ const ShoppingActions = ({
                 size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
-                socialMediaIcon={false}
-                leftIcon={false}
-                rightIcon={false}
+                
                 className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 S
               </Button>
@@ -87,9 +83,7 @@ const ShoppingActions = ({
                 size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
-                socialMediaIcon={false}
-                leftIcon={false}
-                rightIcon={false}
+                
                 className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 M
               </Button>
@@ -97,9 +91,7 @@ const ShoppingActions = ({
                 size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
-                socialMediaIcon={false}
-                leftIcon={false}
-                rightIcon={false}
+                
                 className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 L
               </Button>
@@ -107,9 +99,7 @@ const ShoppingActions = ({
                size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='normal'
-                socialMediaIcon={false}
-                leftIcon={false}
-                rightIcon={false}
+                
                 className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 XL
               </Button>
@@ -117,9 +107,7 @@ const ShoppingActions = ({
                 size={size == "Web" ? "small" : 'x-small' }
                 theme='secondary'
                 stateProp='disabled'
-                socialMediaIcon={false}
-                leftIcon={false}
-                rightIcon={false}
+                
                 className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
                 XL
               </Button>

@@ -1,10 +1,10 @@
-import React from "react";
+
 import { useReducer } from "react";
 
 interface Props {
-  socialMediaIcon: boolean;
-  rightIcon: boolean;
-  leftIcon: boolean;
+  socialMediaIcon?: null;
+  rightIcon?: null;
+  leftIcon?: null;
   size: "large" | "x-small" | "medium" | "small";
   theme:
     | "destructive-secondary"
@@ -20,9 +20,9 @@ interface Props {
 }
 
 export const Button = ({
-  // socialMediaIcon = false,
-  // rightIcon = false,
-  // leftIcon = false,
+  //  socialMediaIcon = null,
+  //  rightIcon = null,
+  //  leftIcon = null,
   size,
   theme,
   stateProp,
