@@ -1,12 +1,13 @@
 import './App.css';
 import Header from './components/Header';
-import {  BrowserRouter as Router,Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import SalesPage from './pages/SalesPage';
 import ProductPage from './pages/ProductPage';
+import ShoppingCartPage from './pages/ShoppingCartPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         {/* <Route path='/products' element={<Products />} /> */}
         <Route path='/sale' element={<SalesPage />} />
         <Route path='/productPage' element={<ProductPage />} />
+        <Route path='/shoppingCart' element={<ShoppingCartPage />} />
         {/* <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Registration />} />
       <Route path='/cart' element={<ShoppingCart />} />
@@ -31,7 +33,7 @@ function App() {
         <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />
-      </Router>
+    </Router>
   );
 }
 

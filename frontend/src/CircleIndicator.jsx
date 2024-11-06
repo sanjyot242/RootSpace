@@ -1,5 +1,3 @@
-
-
 const CircleIndicator = ({ fill = '#E4E7EC', width = '11', height = '12' }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
