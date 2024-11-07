@@ -18,7 +18,7 @@ interface CartItemProp {
 
 const CartItem: React.FC<CartItemProp> = ({ quantity, size, products }) => {
   const handleQuantityChange = (newQuantity: number) => {
-    console.log('Quantity changed to:', newQuantity);
+    console.log('Quantity changed to:', newQuantity + size);
     // Update the quantity in the cart or perform other actions
   };
   return (

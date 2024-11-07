@@ -11,7 +11,6 @@ import {
 import CartItem from '../components/CartItem/CartItem';
 import { Button } from '../components/Buttons/Button';
 import Card from '../components/Cards/Card';
-import { tr } from 'framer-motion/client';
 
 function ShoppingCartPage() {
   const { width } = useWindowDimensions();
