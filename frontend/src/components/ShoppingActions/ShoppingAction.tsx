@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import { Button } from '../Buttons/Button';
 import Alert from '../Alert/Alert';
@@ -17,8 +16,8 @@ const ShoppingActions = ({
   const itemSpacing = size === 'Web' ? 'gap-64' : 'gap-32';
 
   return (
-    <div className={`flex flex-col ${itemSpacing}`}>
-      <div className='flex flex-col gap-8 items-start self-stretch'>
+    <div className={`flex flex-col w-full ${itemSpacing}`}>
+      <div className='flex flex-col gap-8 items-start self-stretch '>
         <h2 className='headingsh4medium text-text-primary'>Product Name</h2>
         <p className='paragraphsmallregular text-text-tertiary'>
           Product Description
@@ -64,51 +63,45 @@ const ShoppingActions = ({
           <div className='flex gap-32 items-center self-stretch justify-between'>
             <div className='flex gap-8 '>
               <Button
-                size={size == "Web" ? "small" : 'x-small' }
+                size={size == 'Web' ? 'small' : 'x-small'}
                 theme='secondary'
                 stateProp='normal'
-                
-                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
+                className={size == 'Web' ? 'w-[49px]' : 'w-[39px]'}>
                 XS
               </Button>
               <Button
-                size={size == "Web" ? "small" : 'x-small' }
+                size={size == 'Web' ? 'small' : 'x-small'}
                 theme='secondary'
                 stateProp='normal'
-                
-                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
+                className={size == 'Web' ? 'w-[49px]' : 'w-[39px]'}>
                 S
               </Button>
               <Button
-                size={size == "Web" ? "small" : 'x-small' }
+                size={size == 'Web' ? 'small' : 'x-small'}
                 theme='secondary'
                 stateProp='normal'
-                
-                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
+                className={size == 'Web' ? 'w-[49px]' : 'w-[39px]'}>
                 M
               </Button>
               <Button
-                size={size == "Web" ? "small" : 'x-small' }
+                size={size == 'Web' ? 'small' : 'x-small'}
                 theme='secondary'
                 stateProp='normal'
-                
-                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
+                className={size == 'Web' ? 'w-[49px]' : 'w-[39px]'}>
                 L
               </Button>
               <Button
-               size={size == "Web" ? "small" : 'x-small' }
+                size={size == 'Web' ? 'small' : 'x-small'}
                 theme='secondary'
                 stateProp='normal'
-                
-                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
+                className={size == 'Web' ? 'w-[49px]' : 'w-[39px]'}>
                 XL
               </Button>
               <Button
-                size={size == "Web" ? "small" : 'x-small' }
+                size={size == 'Web' ? 'small' : 'x-small'}
                 theme='secondary'
                 stateProp='disabled'
-                
-                className={size == "Web" ? "w-[49px]" : 'w-[39px]' }>
+                className={size == 'Web' ? 'w-[49px]' : 'w-[39px]'}>
                 XL
               </Button>
             </div>
@@ -137,7 +130,6 @@ const ShoppingActions = ({
           size='large'
           stateProp={buttonSetActive ? 'normal' : 'disabled'}
           theme='secondary'
-          
           className='w-1/2'>
           Add to Wishlist
         </Button>

@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import CircleIndicator from '../../CircleIndicator.jsx'; // Import the reusable SVG component
 
 const ProductSection = ({ isMobile }) => {
@@ -15,9 +15,9 @@ const ProductSection = ({ isMobile }) => {
   ]; // Array of image paths
 
   return (
-    <div>
+    <div className='w-full'>
       {isMobile ? (
-        <div className='flex flex-col items-start gap-8 self-stretch'>
+        <div className='flex flex-col items-start gap-8 self-stretch w-full'>
           {/* Main Product Image */}
           <div
             className='w-full h-[357px] bg-contain bg-no-repeat bg-center rounded-xxs'
