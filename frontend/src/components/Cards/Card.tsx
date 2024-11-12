@@ -5,8 +5,10 @@ interface CardProps {
   trigger?: 'Checkbox' | 'Radio Button' | 'Switch';
   showDescription?: boolean;
   showButton?: boolean;
-  showPaymentIcon?: boolean;
+  paymentIcon?: React.ReactNode;
   icon?: React.ReactNode;
+  header:string;
+  description:string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -14,26 +16,28 @@ const Card: React.FC<CardProps> = ({
   trigger = 'Radio Button',
   showDescription = true,
   showButton = true,
-  showPaymentIcon = true,
+  paymentIcon ,
+  header='Express Shipping',
+  description='Fast shipping for additional $20',
   icon,
 }) => {
   const cardClasses = [
-    'w-[493px] h-[88px] p-4 flex items-center gap-4 border rounded-lg',
+    'w-full p-16 flex items-center gap-16 border rounded-xxs',
   ];
 
   if (state === 'Normal') {
-    cardClasses.push('bg-white border-gray-300');
+    cardClasses.push('bg-white border-stroke-secondary');
   } else if (state === 'Hover') {
-    cardClasses.push('bg-gray-100 border-gray-300');
+    cardClasses.push('bg-bg-primary_hover border-stroke-secondary');
   } else if (state === 'Selected') {
-    cardClasses.push('bg-blue-50 border-blue-200');
+    cardClasses.push('bg-bg-information border-stroke-secondary');
   } else if (state === 'Disabled') {
-    cardClasses.push('bg-gray-200 border-gray-300');
+    cardClasses.push('bg-bg-secondary   border-stroke-secondary ');
   }
 
   const buttonClasses = ['py-2 px-4 border rounded-md'];
   if (state !== 'Disabled') {
-    buttonClasses.push('bg-blue-500 text-white');
+    buttonClasses.push('bg-bg-information text-white');
   } else {
     buttonClasses.push('bg-gray-300 text-gray-500 cursor-not-allowed');
   }
@@ -61,20 +65,39 @@ const Card: React.FC<CardProps> = ({
             disabled={state === 'Disabled'}
             className='sr-only peer'
           />
-          <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-checked:bg-blue-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+          <div className="  w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-checked:bg-bg-information0 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-stroke-secondary after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
         </label>
       )}
+      
+      
+  {icon && (<div className="w-48 h-48">
+    <span className="w-full h-full flex items-center justify-center">
+      <span className="w-full h-full">{icon}</span>
+    </span>
+    </div>
+  )}
 
-      {icon && <span>{icon}</span>}
-      <div className='flex-grow'>
-        <h4 className='font-semibold'>Express Shipping</h4>
+
+  {paymentIcon && (<div className="w-48 h-48">
+    <span className="w-full h-full flex items-center justify-center">
+      <span className="w-full h-full">{paymentIcon}</span>
+    </span>
+    </div>
+  )}
+
+
+      
+     
+      
+      <div className='flex flex-col gap-8 '>
+        <h4 className='text-text-primary font-normal paragraphsmallregular'>{header}</h4>
         {showDescription && (
-          <p className='text-sm text-gray-600'>
-            Free shipping for an additional $23
+          <p className='text-text-paragraph font-normal paragraphmediumregular'>
+            {description}
           </p>
         )}
       </div>
-      {showPaymentIcon && <span className='material-icons'>credit_card</span>}
+      
       {showButton && (
         <button
           disabled={state === 'Disabled'}

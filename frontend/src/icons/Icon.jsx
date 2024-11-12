@@ -3,8 +3,8 @@
 
 export const InfoIcon = (props) => (
   <svg
-    height='20'
-    width='20'
+    height='100%'
+    width='100%'
     fill='none'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'>
@@ -20,8 +20,8 @@ export const InfoIcon = (props) => (
 
 export const EyeIcon = (props) => (
   <svg
-    height='20'
-    width='20'
+    height='100%'
+    width='100%'
     fill='none'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'>
@@ -44,8 +44,8 @@ export const EyeIcon = (props) => (
 
 export const SettingIcon = (props) => (
   <svg
-    height='20'
-    width='20'
+    height='100%'
+    width='100%'
     fill='none'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'>
@@ -68,8 +68,8 @@ export const SettingIcon = (props) => (
 
 export const StarIcon = (props) => (
   <svg
-    height='20'
-    width='20'
+    height='100%'
+    width='100%'
     fill='none'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'>
@@ -79,4 +79,28 @@ export const StarIcon = (props) => (
       strokeWidth='1.67'
     />
   </svg>
+
+ 
 );
+
+export const ReturnIcon = (props) =>(
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20 20" fill="none">
+  <path d="M13.1112 12.3333V11.5556C13.1112 9.83734 11.7183 8.44444 10.0001 8.44444H6.88894M6.88894 8.44444L9.22228 10.7778M6.88894 8.44444L9.22228 6.11111M16.2223 17V4.55556C16.2223 3.69645 15.5258 3 14.6667 3H5.33339C4.47428 3 3.77783 3.69645 3.77783 4.55556V17L6.88894 15.4444L10.0001 17L13.1112 15.4444L16.2223 17Z" stroke="#171717" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+);
+
+// export const  = (props) =>(
+//   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+//   <path d="M9.53834 3.10996C9.70914 2.69932 10.2909 2.69932 10.4617 3.10996L12.2632 7.4415C12.3353 7.61462 12.4981 7.7329 12.685 7.74789L17.3612 8.12278C17.8045 8.15832 17.9843 8.71158 17.6465 9.00091L14.0837 12.0528C13.9413 12.1748 13.8791 12.3662 13.9226 12.5486L15.0111 17.1118C15.1143 17.5444 14.6437 17.8864 14.2642 17.6545L10.2606 15.2092C10.1006 15.1115 9.89938 15.1115 9.73937 15.2092L5.73584 17.6545C5.35629 17.8864 4.88567 17.5444 4.98886 17.1118L6.07736 12.5486C6.12086 12.3662 6.05868 12.1748 5.91628 12.0528L2.35347 9.00091C2.0157 8.71157 2.19546 8.15832 2.63879 8.12278L7.31505 7.74789C7.50194 7.7329 7.66475 7.61462 7.73675 7.4415L9.53834 3.10996Z" stroke="#171717" stroke-width="1.67"/>
+// </svg>
+// );
+
+
+export const UsersIcon = (props) =>(
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20 20" fill="none">
+  <path d="M10 4.05325C10.5701 3.40736 11.4041 3 12.3333 3C14.0516 3 15.4444 4.39289 15.4444 6.11111C15.4444 7.82933 14.0516 9.22222 12.3333 9.22222C11.4041 9.22222 10.5701 8.81486 10 8.16897M12.3333 17H3V16.2222C3 13.6449 5.08934 11.5556 7.66667 11.5556C10.244 11.5556 12.3333 13.6449 12.3333 16.2222V17ZM12.3333 17H17V16.2222C17 13.6449 14.9107 11.5556 12.3333 11.5556C11.4833 11.5556 10.6864 11.7828 10 12.1799M10.7778 6.11111C10.7778 7.82933 9.38489 9.22222 7.66667 9.22222C5.94845 9.22222 4.55556 7.82933 4.55556 6.11111C4.55556 4.39289 5.94845 3 7.66667 3C9.38489 3 10.7778 4.39289 10.7778 6.11111Z" stroke="#171717" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+);
+
+
+

@@ -1,7 +1,8 @@
 import CloseButton from '../components/Buttons/CloseButton';
 
 import { trendingProducts } from '../../dummyData/data';
-import { EyeIcon } from '../icons/Icon';
+import {  ReturnIcon,UsersIcon , StarIcon } from '../icons/Icon';
+
 import useWindowDimensions from './../../useWindowDimensions';
 
 import {
@@ -11,6 +12,8 @@ import {
 import CartItem from '../components/CartItem/CartItem';
 import { Button } from '../components/Buttons/Button';
 import Card from '../components/Cards/Card';
+import CustomizableSection from '../components/CustomizableSection';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 function ShoppingCartPage() {
   const { width } = useWindowDimensions();
@@ -83,17 +86,55 @@ function ShoppingCartPage() {
         </div>
 
         {/* Cards  */}
-        <div className='flex items-start gap-16 self-stretch'>
+        <div className='flex flex-col items-start gap-16 self-stretch md:flex-row'>
           <Card
             state='Normal'
             trigger='Radio Button'
-            showPaymentIcon={false}
-            icon={<EyeIcon />}
+            icon={< ReturnIcon/>}
             showButton={false}
             showDescription={true}
+            header='Express Shipping'
+            description='Fash Shipping for additional $20'
+          />
+          <Card
+            state='Normal'
+            trigger='Radio Button'
+            icon={< StarIcon/>}
+            showButton={false}
+            showDescription={true}
+            header='Express Shipping'
+            description='Fash Shipping for additional $20'
+          />
+          <Card
+            state='Normal'
+            trigger='Radio Button'
+            icon={< UsersIcon/>}
+            showButton={false}
+            showDescription={true}
+            header='Express Shipping'
+            description='Fash Shipping for additional $20'
           />
         </div>
+
+
+        
       </div>
+      <div>
+        <CustomizableSection
+        title='Your Browsing History'
+        products={trendingProducts}
+        subtitle={''}
+      />
+        </div>
+        <div>
+        <CustomizableSection
+        title='Trending Products'
+        products={trendingProducts}
+        subtitle={''}
+      />
+        </div>
+        <NewsletterSignup />
+
     </>
   );
 }
