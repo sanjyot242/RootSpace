@@ -125,15 +125,15 @@ function ShoppingCartPage() {
         products={trendingProducts}
         subtitle={''}
       />
-        </div>
-        <div>
+      </div>
+      <div>
         <CustomizableSection
         title='Trending Products'
         products={trendingProducts}
         subtitle={''}
       />
-        </div>
-        <NewsletterSignup />
+      </div>
+      <NewsletterSignup />
 
     </>
   );

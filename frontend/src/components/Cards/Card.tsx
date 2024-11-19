@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../Buttons/Button';
 
 interface CardProps {
   state?: 'Normal' | 'Hover' | 'Selected' | 'Disabled';
@@ -6,6 +7,7 @@ interface CardProps {
   showDescription?: boolean;
   showButton?: boolean;
   paymentIcon?: React.ReactNode;
+  showAction?:boolean;
   icon?: React.ReactNode;
   header:string;
   description:string;
@@ -17,12 +19,13 @@ const Card: React.FC<CardProps> = ({
   showDescription = true,
   showButton = true,
   paymentIcon ,
+  showAction = false,
   header='Express Shipping',
   description='Fast shipping for additional $20',
   icon,
 }) => {
   const cardClasses = [
-    'w-full p-16 flex items-center gap-16 border rounded-xxs',
+    'w-full p-16 flex  gap-16 border rounded-xxs',
   ];
 
   if (state === 'Normal') {
@@ -44,6 +47,44 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <div className={cardClasses.join(' ')}>
+      
+      
+      
+  {icon && (<div className="w-48 h-48">
+    <span className="w-full h-full flex items-center justify-center">
+      <span className="w-full h-full">{icon}</span>
+    </span>
+    </div>
+  )}
+
+
+  {paymentIcon && (<div className="w-48 h-48">
+    <span className="w-full h-full flex items-center justify-center">
+      <span className="w-full h-full">{paymentIcon}</span>
+    </span>
+    </div>
+  )}
+
+
+      
+     
+      
+      <div className='flex flex-col gap-8 w-full'>
+        <h4 className='text-text-primary font-normal paragraphmediumsemibold'>{header}</h4>
+        {showDescription && (
+          <p className='text-text-paragraph font-normal paragraphmediumregular'>
+            {description}
+          </p>
+        )}
+
+        {showAction && (
+          <div className='flex gap-16'>
+            <Button size='small' stateProp='normal' theme='link' >Edit</Button>
+            <Button size='small' stateProp='normal' theme='destructive-link' >Delete</Button>
+          </div>
+        )}
+      </div>
+      
       {showButton && trigger === 'Radio Button' && (
         <input
           type='radio'
@@ -67,43 +108,6 @@ const Card: React.FC<CardProps> = ({
           />
           <div className="  w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-checked:bg-bg-information0 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-stroke-secondary after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
         </label>
-      )}
-      
-      
-  {icon && (<div className="w-48 h-48">
-    <span className="w-full h-full flex items-center justify-center">
-      <span className="w-full h-full">{icon}</span>
-    </span>
-    </div>
-  )}
-
-
-  {paymentIcon && (<div className="w-48 h-48">
-    <span className="w-full h-full flex items-center justify-center">
-      <span className="w-full h-full">{paymentIcon}</span>
-    </span>
-    </div>
-  )}
-
-
-      
-     
-      
-      <div className='flex flex-col gap-8 '>
-        <h4 className='text-text-primary font-normal paragraphsmallregular'>{header}</h4>
-        {showDescription && (
-          <p className='text-text-paragraph font-normal paragraphmediumregular'>
-            {description}
-          </p>
-        )}
-      </div>
-      
-      {showButton && (
-        <button
-          disabled={state === 'Disabled'}
-          className={buttonClasses.join(' ')}>
-          Select
-        </button>
       )}
     </div>
   );
